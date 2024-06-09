@@ -1,0 +1,11 @@
+# Propiedades globales
+separator=true
+separator_block_width=15
+
+align=center
+markup=UbuntuMono 8
+color=#eeeeee
+
+[Hora]
+command=date +'%H:%M'
+interval=1
