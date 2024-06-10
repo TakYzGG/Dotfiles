@@ -11,61 +11,61 @@ border_width = 0
 border_sides = TBLR
 background_color = #19445B
 border_color = #19445B
-background_color_hover = #000000 60
-border_color_hover = #000000 30
-background_color_pressed = #000000 60
-border_color_pressed = #000000 30
+background_color_hover = #000000 
+border_color_hover = #000000 
+background_color_pressed = #000000 
+border_color_pressed = #000000 
 
 # Background 2: Default task, Iconified task
-rounded = 4
+rounded = 2
 border_width = 1
 border_sides = TBLR
 background_color = #0E3557
 border_color = #0E3557
 background_color_hover = #638AB2
 border_color_hover = #638AB2
-background_color_pressed = #555555 4
-border_color_pressed = #eaeaea 44
+background_color_pressed = #555555 
+border_color_pressed = #eaeaea 
 
 # Background 3: Active task
-rounded = 4
+rounded = 2
 border_width = 1
 border_sides = TBLR
 background_color = #20547B
 border_color = #20547B
 background_color_hover = #638AB2
 border_color_hover = #638AB2
-background_color_pressed = #555555 4
-border_color_pressed = #eaeaea 44
+background_color_pressed = #555555 
+border_color_pressed = #eaeaea 
 
 # Background 4: Urgent task
-rounded = 4
+rounded = 2
 border_width = 1
 border_sides = TBLR
-background_color = #aa4400 100
-border_color = #aa7733 100
-background_color_hover = #cc7700 100
-border_color_hover = #aa7733 100
-background_color_pressed = #555555 4
-border_color_pressed = #aa7733 100
+background_color = #aa4400 
+border_color = #aa7733 
+background_color_hover = #cc7700 
+border_color_hover = #aa7733 
+background_color_pressed = #555555 
+border_color_pressed = #aa7733 
 
 # Background 5: Tooltip
 rounded = 1
 border_width = 1
 border_sides = TBLR
-background_color = #222222 100
-border_color = #333333 100
-background_color_hover = #ffffaa 100
-border_color_hover = #000000 100
-background_color_pressed = #ffffaa 100
-border_color_pressed = #000000 100
+background_color = #222222 
+border_color = #333333 
+background_color_hover = #ffffaa 
+border_color_hover = #000000 
+background_color_pressed = #ffffaa 
+border_color_pressed = #000000
 
 #-------------------------------------
 # Panel
 panel_items = LTSC
 panel_size = 100% 16
 panel_margin = 0 0
-panel_padding = 2 0 2
+panel_padding = 0 0 0
 panel_background_id = 1
 wm_menu = 1
 panel_dock = 0
