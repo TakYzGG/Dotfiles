@@ -3,8 +3,8 @@ separator=true
 separator_block_width=15
 
 align=center
-markup=UbuntuMono 8
-color=#eeeeee
+markup=UbuntuMono Nerd Font Mono Bold 10
+color=#EEEEEE
 
 [Hora]
 command=date +'%H:%M'
