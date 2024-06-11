@@ -23,7 +23,6 @@ bindsym $mod+Return exec lxterminal
 bindsym $mod+d exec dmenu_run
 bindsym $mod+e exec Thunar
 bindsym $mod+w exec firefox
-bindsym $mod+F10 exec retroarch
 
 # Salir de i3
 bindsym $mod+Shift+F11 exec "i3-msg exit"
