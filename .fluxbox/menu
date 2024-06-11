@@ -1,9 +1,28 @@
-[begin] (Fluxbox-1.3.7)
+# Nombre del menu
+[begin] (Menu)
 [encoding] {UTF-8}
-      [exec] (Lxterminal)       {lxterminal}
-      [exec] (Firefox)          {firefox}
-      [exec] (Thunar)           {Thunar}
-      [exec] (Abrir programas)  {dmenu_run}
+      
+# Buscador      
+      [exec] (Buscar programas)      {dmenu_run}
+
+# Submenu Programas
+[submenu] (Programas)
+      [exec] (Lxterminal)            {lxterminal}
+      [exec] (Firefox) 	             {firefox}
+      [exec] (Thunar) 	             {Thunar}
+      [exec] (Editor de texto)       {leafpad}
+      [exec] (Reproductor de video)  {vlc}
+      [exec] (Reproductor de musica) {lxterminal -e cmus}
+[end]
+
+# Submenu office
+[submenu] (Office)
+      [exec] (Word) 		     {libreoffice --writer}
+      [exec] (Exel)		     {libreoffice --calc}
+      [exec] (Powerpoint)            {libreoffice --impress}
+[end]
+
+# Submenu Fluxblox menu
 [submenu] (Fluxbox menu)
       [config] (Configure)
 [submenu] (System Styles) {Choose a style...}
