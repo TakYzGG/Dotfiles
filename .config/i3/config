@@ -5,6 +5,7 @@
 # Inicio automatico
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id setxkbmap -layout latam
+exec --no-startup-id feh --bg-scale ~/Wallpapers/1.png
 
 # Recargar la configuracion de i3wm
 bindsym $mod+Shift+r restart
@@ -20,7 +21,7 @@ set $mod Mod4
 bindsym $mod+Return exec lxterminal
 
 # Ejecutar un programa
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9" -fn "UbuntuMono Nerd Font Mono Bold-10"
 bindsym $mod+e exec Thunar
 bindsym $mod+w exec firefox
 
@@ -103,7 +104,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws0 "0"
+set $ws0 "10"
 
 #-----------------------------
 # <<--Atajos de escritorio-->>
@@ -140,10 +141,20 @@ bindsym $mod+Shift+0 move container to workspace $ws0
 # Fuente
 font pango:UbuntuMono Nerd Font Mono Bold 10
 
+# Theme colors: Nord Theme
+
 # Colores de las ventanas
 
-#     	        backgr. border  backgr. border
-client.focused #444444 #00FFFF #444444 #FF00FF
+#     	        	  backgr. border  backgr. border
+client.focused 		  #2E3440 #5E81AC #2E3440 #B84AED
+client.focused_inactive   #3B4252 #3B4252 #3B4252 #3B4252
+client.unfocused          #3B4252 #3B4252 #3B4252 #3B4252
+client.urgent		  #3B4252 #3B4252 #3B4252 #3B4252
+
+# Gaps
+smart_gaps on
+gaps inner 2
+gaps outer 2
 
 # Barra de titulo de las ventanas
 for_window [class="^.*"] border pixel 2
@@ -155,13 +166,13 @@ bar {
         status_command i3blocks
         height 12
         colors {
-            background #000000
-            statusline #00FFFF
+            background #2E3440
+            statusline #2E3440
             separator  #666666
             #                   border  backgr. text
-            focused_workspace  #000000 #000000 #00FFFF
-            active_workspace   #222222 #5F676A #FFFFFF
-            inactive_workspace #000000 #000000 #FFFFFF
-            urgent_workspace   #2F343A #900000 #FFFFFF
+	    focused_workspace  #2E3440 #2E3440 #D8DEE9
+            active_workspace   #2E3440 #2E3440 #4C566A
+            inactive_workspace #2E3440 #2E3440 #4C566A
+            urgent_workspace   #2E3440 #2E3440 #4C566A
         }
 }
