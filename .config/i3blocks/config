@@ -1,10 +1,7 @@
 # Propiedades globales
-separator=true
-separator_block_width=15
-
 align=center
 markup=UbuntuMono Nerd Font Mono Bold 10
-color=#EEEEEE
+color=#D8DEE9
 
 [Hora]
 command=date +'%H:%M'
