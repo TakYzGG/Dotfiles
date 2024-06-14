@@ -1,18 +1,18 @@
 # Nombre del menu
 [begin] (Menu)
 [encoding] {UTF-8}
-      
+ 
 # Buscador      
       [exec] (Buscar programas)      {dmenu_run}
 
 # Submenu Programas
 [submenu] (Programas)
-      [exec] (Lxterminal)            {lxterminal}
-      [exec] (Firefox) 	             {firefox}
-      [exec] (Thunar) 	             {Thunar}
-      [exec] (Editor de texto)       {leafpad}
-      [exec] (Reproductor de video)  {vlc}
-      [exec] (Reproductor de musica) {lxterminal -e cmus}
+      [exec] (Firefox) 						{firefox}
+	  [exec] (Calculadora)					{galculator}
+      [exec] (Editor de texto)       		{leafpad}
+      [exec] (Reproductor de video)  		{vlc}
+      [exec] (Reproductor de musica) 		{lxterminal -e cmus}
+	  [exec] (Explorador de archivos)       {Thunar}
 [end]
 
 # Submenu office
