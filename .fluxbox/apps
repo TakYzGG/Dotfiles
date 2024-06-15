@@ -1,5 +1,0 @@
-# Desactivar nombre de las ventanas en la barra de tareas
-[app] (type=normal)
-  [IconHidden] {no}
-  [Hidden]     {yes}
-[end]
