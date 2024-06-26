@@ -4,7 +4,6 @@
 setxkbmap -layout latam
 
 # Programsa de inicio
-#|exec tint2 &
 exec feh --bg-scale ~/Wallpapers &
 
 # Fluxbox

@@ -2,28 +2,49 @@
 [begin] (Menu)
 [encoding] {UTF-8}
  
-# Buscador      
-      [exec] (Buscar programas)      {dmenu_run}
-
-# Submenu Programas
-[submenu] (Programas)
-      [exec] (Firefox) 						{firefox}
-	  [exec] (Calculadora)					{galculator}
-      [exec] (Editor de texto)       		{leafpad}
-      [exec] (Reproductor de video)  		{vlc}
-      [exec] (Reproductor de musica) 		{lxterminal -e cmus}
+# Buscador
+      [exec] (Buscar programas)     	 	{dmenu_run}
+    
+# Firefox
+	  [exec] (Firefox) 						{firefox}
+	  
+# Thunar
 	  [exec] (Explorador de archivos)       {Thunar}
+
+# Submenu Utilidades
+[submenu] (Utilidades)
+	  [exec] (Calculadora)					{galculator}
+	  [exec] (Visor de PDF)					{xreader}
+      [exec] (Editor de texto)				{leafpad}
+	  [exec] (Gestor de discos)				{gparted}
+	  [exec] (Compresor de archivos)		{xarchiver}
+[end]
+
+# Submenu Multimedia
+[submenu] (Multimedia)
+		[exec] (Vlc)						{Reproductor de video}
+		[exec] (Audacius)					{Reproductor de musica}
 [end]
 
 # Submenu office
-[submenu] (Office)
-      [exec] (Word) 		     {libreoffice --writer}
-      [exec] (Exel)		     {libreoffice --calc}
-      [exec] (Powerpoint)            {libreoffice --impress}
+[submenu] (Libre Office)
+      [exec] (Word) 		     			{libreoffice --writer}
+      [exec] (Exel)		     				{libreoffice --calc}
+      [exec] (Dibujo) 		     			{libreoffice --draw}
+      [exec] (Powerpoint)            		{libreoffice --impress}
+      [exec] (Base de datos) 		     	{libreoffice --base}
+      [exec] (Editor de formulas) 		    {libreoffice --math}
+[end]
+
+# Submenu Energia
+[submenu] (Energia)
+		[exec] (Apagar)						{lxterminal -e sudo poweroff}
+		[exec] (Reiniciar)					{lxterminal -e sudo reboot}
+        [exit] (Cerrar Sesion)
 [end]
 
 # Submenu Fluxblox menu
-[submenu] (Fluxbox menu)
+[submenu] (Configuracion de Fluxbox)
       [config] (Configure)
 [submenu] (System Styles) {Choose a style...}
       [stylesdir] (/usr/share/fluxbox/styles)
@@ -36,8 +57,6 @@
       [reconfig] (Reload config)
       [restart] (Restart)
       [exec] (About) {(fluxbox -v; fluxbox -info | sed 1d) | xmessage -file - -center}
-      [separator]
-      [exit] (Exit)
 [end]
 [endencoding]
 [end]
