@@ -31,17 +31,13 @@ OnTitlebar Mouse2 :Lower
 OnTitlebar Mouse3 :WindowMenu
 
 # Moverse entre ventanas
-Mod4 k :NextWindow
-Mod4 j :PrevWindow
+Mod4 Tab :NextWindow {grups} (workspace=[current])
 
 # Abrir programas
 Mod4 Return :Exec lxterminal
 Mod4 w      :Exec firefox
 Mod4 d		:Exec dmenu_run
 Mod4 e	    :Exec Thunar
-Mod4 c		:Exec galculator
-Mod4 b 		:Exec leafpad
-Mod4 v		:Exec vlc
 
 # Atajos de ventanas
 Shift Mod4 q :Close

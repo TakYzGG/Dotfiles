@@ -16,14 +16,15 @@
 	  [exec] (Calculadora)					{galculator}
 	  [exec] (Visor de PDF)					{xreader}
       [exec] (Editor de texto)				{leafpad}
-	  [exec] (Gestor de discos)				{gparted}
+	  [exec] (Gestor de discos)				{lxterminal -e sudo gparted}
 	  [exec] (Compresor de archivos)		{xarchiver}
+	  [exec] (Controlador de volumen)		{pavucontrol}
 [end]
 
 # Submenu Multimedia
 [submenu] (Multimedia)
-		[exec] (Vlc)						{Reproductor de video}
-		[exec] (Audacius)					{Reproductor de musica}
+		[exec] (Reproductor de video)		{vlc}
+		[exec] (Reproductor de musica)		{audacius}
 [end]
 
 # Submenu office
@@ -34,6 +35,14 @@
       [exec] (Powerpoint)            		{libreoffice --impress}
       [exec] (Base de datos) 		     	{libreoffice --base}
       [exec] (Editor de formulas) 		    {libreoffice --math}
+[end]
+
+# Submenu Personalizacion
+[submenu] (Personalizar)
+		[exec] (Temas programas) {lxappearance}
+		[submenu] (Temas fluxbox) {Choose a style...}
+				[stylesdir] (~/.fluxbox/styles)
+[end]	
 [end]
 
 # Submenu Energia
@@ -48,9 +57,6 @@
       [config] (Configure)
 [submenu] (System Styles) {Choose a style...}
       [stylesdir] (/usr/share/fluxbox/styles)
-[end]
-[submenu] (User Styles) {Choose a style...}
-      [stylesdir] (~/.fluxbox/styles)
 [end]
       [workspaces] (Workspace List)
       [commanddialog] (Fluxbox Command)
