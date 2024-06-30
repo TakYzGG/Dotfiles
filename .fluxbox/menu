@@ -25,7 +25,7 @@
 # Submenu Multimedia
 [submenu] (Multimedia)
 		[exec] (Reproductor de video)		{vlc}
-		[exec] (Reproductor de musica)		{audacius}
+		[exec] (Reproductor de musica)		{audacious}
 [end]
 
 # Submenu office
