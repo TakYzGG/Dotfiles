@@ -1,10 +1,7 @@
 Atajos de teclado de fluxbox
 
 <--cambiar de ventana-->
-   win + k (siguiente ventana)
-   win + j (anterior ventana)
-   (funcionan raro)
-
+   win + tab
 <--cambiar de escritorio-->
    win + 0-9
 
@@ -15,17 +12,18 @@ Atajos de teclado de fluxbox
    win + ctrl + 0-9
 
 <--atajos de ventana-->>
-   win + shift + q 	   (cerrar)
-   win + F9        	   (minimizar)
-   win + F10       	   (maximizar)
-   win + F11	           (pantalla completa)
-   alt + click derecho     (redimencionar)
+   win + shift + q				(cerrar)
+   win + F9						(minimizar)
+   win + F10					(maximizar)
+   win + F11					(pantalla completa)
+   alt + click derecho			(redimencionar)
+   alt + click izquierdo		(mover)
+
+<--salir de fluxbox-->
+   win + shift + F11
 
 <--abrir programas-->
    win + return (lxterminal)
    win + d      (dmenu)
    win + w      (firefox)
-   win + e      (thunar)
-   win + c 		(calculadora)
-   win + b		(block de notas)
-   win + v 		(reproductor de video)
+   win + e      (thunar) 

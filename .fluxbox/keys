@@ -33,6 +33,12 @@ OnTitlebar Mouse3 :WindowMenu
 # Moverse entre ventanas
 Mod4 Tab :NextWindow {grups} (workspace=[current])
 
+# Mostrar el escritorio
+Mod4 F1 :ShowDesktop
+
+# Abrir menu
+Mod4 space :WindowMenu
+
 # Abrir programas
 Mod4 Return :Exec lxterminal
 Mod4 w      :Exec firefox
