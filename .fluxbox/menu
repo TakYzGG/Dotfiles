@@ -8,7 +8,7 @@
 # Firefox
 [submenu] (Internet)
 	  [exec] (Firefox)						{firefox}
-	  [exec] (Conectarse a internet)		{lxterminal -e nmtui}
+	  [exec] (Conectarse a internet)		{lxterminal -e sudo nmtui}
 [end]
 
 # Submenu Utilidades
