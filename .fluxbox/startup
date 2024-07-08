@@ -5,6 +5,7 @@ setxkbmap -layout latam
 
 # Programsa de inicio
 exec feh --bg-scale ~/Wallpapers &
+exec plank &
 
 # Fluxbox
 exec fluxbox
