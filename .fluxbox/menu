@@ -17,7 +17,7 @@
 	  [exec] (Visor de PDF)					{xreader}
       [exec] (Editor de texto)				{leafpad}
 	  [exec] (Gestor de discos)				{lxterminal -e sudo gparted}
-	  [exec] (Gestor de tareas)				{lxterminal -e btop}
+      [exec] (Visor de imagenes)            {mirage}
 	  [exec] (Compresor de archivos)		{xarchiver}
 	  [exec] (Explorador de archivos)       {Thunar}
 	  [exec] (Controlador de volumen)		{pavucontrol}
@@ -39,32 +39,23 @@
       [exec] (Editor de formulas) 		    {libreoffice --math}
 [end]
 
-# Submenu Personalizacion
-[submenu] (Personalizar)
+# Submenu Energia
+[submenu] (Apagar / Reiniciar)
+		[exec] (Apagar)						{lxterminal -e sudo poweroff}
+		[exec] (Reiniciar)					{lxterminal -e sudo reboot}
+[end]
+
+# Submenu Fluxblox menu
+[submenu] (Configuracion del sistema)
+		[exec] (Resolucion)					{arandr}			
+		[exec] (Gestor de tareas)			{lxterminal -e btop}
+		[reconfig] 							(Recargar configuracion)
+[submenu] (Personalizar sistema)
 		[exec] (Temas programas) {lxappearance}
 		[submenu] (Temas fluxbox) {Choose a style...}
 				[stylesdir] (~/.fluxbox/styles)
 [end]	
 [end]
-
-# Submenu Energia
-[submenu] (Energia)
-		[exec] (Apagar)						{lxterminal -e sudo poweroff}
-		[exec] (Reiniciar)					{lxterminal -e sudo reboot}
-        [exit] (Cerrar Sesion)
-[end]
-
-# Submenu Fluxblox menu
-[submenu] (Configuracion de Fluxbox)
-      [config] (Configure)
-[submenu] (System Styles) {Choose a style...}
-      [stylesdir] (/usr/share/fluxbox/styles)
-[end]
-      [workspaces] (Workspace List)
-      [commanddialog] (Fluxbox Command)
-      [reconfig] (Reload config)
-      [restart] (Restart)
-      [exec] (About) {(fluxbox -v; fluxbox -info | sed 1d) | xmessage -file - -center}
 [end]
 [endencoding]
 [end]
