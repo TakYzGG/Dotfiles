@@ -17,6 +17,7 @@
 	  [exec] (Visor de PDF)					{xreader}
       [exec] (Editor de texto)				{leafpad}
 	  [exec] (Gestor de discos)				{lxterminal -e sudo gparted}
+	  [exec] (Gestor de tareas)				{lxterminal -e btop}
 	  [exec] (Compresor de archivos)		{xarchiver}
 	  [exec] (Explorador de archivos)       {Thunar}
 	  [exec] (Controlador de volumen)		{pavucontrol}
