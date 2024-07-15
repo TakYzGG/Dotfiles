@@ -105,6 +105,9 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws0 "10"
 
+# Programas con escritorio predeterminado
+for_window [class="Firefox"] move container to workspace $ws3 
+
 #-----------------------------
 # <<--Atajos de escritorio-->>
 #-----------------------------
@@ -144,11 +147,11 @@ font pango:UbuntuMono Nerd Font Mono Bold 10
 
 # Colores de las ventanas
 
-#     	        	  backgr. border  backgr. border
-client.focused 		  #2E3440 #5E81AC #2E3440 #B84AED
-client.focused_inactive   #3B4252 #3B4252 #3B4252 #3B4252
-client.unfocused          #3B4252 #3B4252 #3B4252 #3B4252
-client.urgent		  #3B4252 #3B4252 #3B4252 #3B4252
+#							backgr. border  backgr. border
+client.focused				#2E3440 #5E81AC #2E3440 #B84AED
+client.focused_inactive		#3B4252 #3B4252 #3B4252 #3B4252
+client.unfocused			#3B4252 #3B4252 #3B4252 #3B4252
+client.urgent				#3B4252 #3B4252 #3B4252 #3B4252
 
 # Gaps
 smart_gaps on
@@ -157,7 +160,6 @@ gaps outer 2
 
 # Barra de titulo de las ventanas
 for_window [class="^.*"] border pixel 2
-new_window pixel 2
 
 # Barra de estado
 bar {
@@ -168,10 +170,10 @@ bar {
             background #2E3440
             statusline #2E3440
             separator  #666666
-            #                   border  backgr. text
-	    focused_workspace  #2E3440 #2E3440 #D8DEE9
-            active_workspace   #2E3440 #2E3440 #4C566A
-            inactive_workspace #2E3440 #2E3440 #4C566A
-            urgent_workspace   #2E3440 #2E3440 #4C566A
+            #						border  backgr. text
+	    	focused_workspace		#2E3440 #2E3440 #D8DEE9
+            active_workspace		#2E3440 #2E3440 #4C566A
+            inactive_workspace		#2E3440 #2E3440 #4C566A
+            urgent_workspace		#2E3440 #2E3440 #4C566A
         }
 }
