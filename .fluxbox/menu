@@ -3,58 +3,58 @@
 [encoding] {UTF-8}
  
 # Buscador
-      [exec] (Buscar programas)     	 	{dmenu_run}
+		[exec] (Buscar programas)				{dmenu_run}
    
 # Separador
-      [separator] 
+		[separator] 
 
 # Firefox
-      [exec] (Firefox)				{firefox}
+		[exec] (Firefox)						{firefox}
 
 # Gestor de archivos
-      [exec] (Gestor de archivos)		{Thunar}
+		[exec] (Gestor de archivos)				{Thunar}
 
 # Separador
-      [separator] 
+		[separator] 
 
 # Submenu internet
 [submenu] (Internet)
-	  [exec] (Firefox)						{firefox}
-	  [exec] (Conectarse a internet)		{lxterminal -e sudo nmtui}
+		[exec] (Firefox)						{firefox}
+		[exec] (Conectarse a internet)			{lxterminal -e sudo nmtui}
 [end]
 
 # Submenu Utilidades
 [submenu] (Accesorios)
-	  [exec] (Calculadora)					{galculator}
-	  [exec] (Visor de PDF)					{xreader}
-      [exec] (Editor de texto)				{leafpad}
-	  [exec] (Gestor de discos)				{lxterminal -e sudo gparted}
-      [exec] (Visor de imagenes)            {mirage}
-	  [exec] (Gestor de archivos)       {Thunar}
-	  [exec] (Compresor de archivos)		{xarchiver}
-	  [exec] (Controlador de volumen)		{pavucontrol}
+		[exec] (Calculadora)					{galculator}
+		[exec] (Visor de PDF)					{xreader}
+		[exec] (Editor de texto)				{leafpad}
+		[exec] (Gestor de discos)				{lxterminal -e sudo gparted}
+		[exec] (Visor de imagenes)            	{mirage}
+		[exec] (Gestor de archivos)				{Thunar}
+		[exec] (Compresor de archivos)			{xarchiver}
+		[exec] (Controlador de volumen)			{pavucontrol}
 [end]
 
 # Submenu Multimedia
 [submenu] (Multimedia)
-		[exec] (Reproductor de video)		{vlc}
-		[exec] (Reproductor de musica)		{audacious}
+		[exec] (Reproductor de video)			{vlc}
+		[exec] (Reproductor de musica)			{audacious}
 [end]
 
 # Submenu office
 [submenu] (Libre Office)
-      [exec] (Word) 		     			{libreoffice --writer}
-      [exec] (Exel)		     				{libreoffice --calc}
-      [exec] (Dibujo) 		     			{libreoffice --draw}
-      [exec] (Powerpoint)            		{libreoffice --impress}
-      [exec] (Base de datos) 		     	{libreoffice --base}
-      [exec] (Editor de formulas) 		    {libreoffice --math}
+		[exec] (Word)							{libreoffice --writer}
+		[exec] (Exel)							{libreoffice --calc}
+		[exec] (Dibujo)							{libreoffice --draw}
+		[exec] (Powerpoint)						{libreoffice --impress}
+		[exec] (Base de datos)					{libreoffice --base}
+		[exec] (Editor de formulas)				{libreoffice --math}
 [end]
 
 # Submenu Energia
 [submenu] (Apagar / Reiniciar)
-		[exec] (Apagar)						{lxterminal -e sudo poweroff}
-		[exec] (Reiniciar)					{lxterminal -e sudo reboot}
+		[exec] (Apagar)							{lxterminal -e sudo poweroff}
+		[exec] (Reiniciar)						{lxterminal -e sudo reboot}
 [end]
 
 # Personalizar
@@ -67,10 +67,10 @@
 
 # Submenu Fluxblox menu
 [submenu] (Configuracion del sistema)
-		[exec] (Resolucion)					{arandr}			
-		[exec] (Administrador de tareas)			{lxterminal -e btop}
+		[exec] (Resolucion)						{arandr}			
+		[exec] (Administrador de tareas)		{lxterminal -e btop}
 		[separator]
-		[restart] 							(Recargar fluxbox)
+		[restart] 								(Recargar fluxbox)
 [end]
 [endencoding]
 [end]
