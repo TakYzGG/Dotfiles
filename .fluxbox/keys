@@ -33,12 +33,6 @@ OnTitlebar Mouse3 :WindowMenu
 # Moverse entre ventanas
 Mod4 Tab :NextWindow {grups} (workspace=[current])
 
-# Mostrar el escritorio
-Mod4 F1 :ShowDesktop
-
-# Abrir menu
-Mod4 space :WindowMenu
-
 # Abrir programas
 Mod4 Return :Exec lxterminal
 Mod4 w      :Exec firefox
@@ -50,6 +44,10 @@ Shift Mod4 q :Close
 Mod4 F9 :Minimize
 Mod4 F10 :Maximize
 Mod4 F11 :Fullscreen
+
+# Subir/bajar brillo
+XF86MonBrightnessUp :Exec xbacklight -inc 10
+XF86MonBrightnessDown :Exec xbacklight -dec 10
 
 # exit fluxbox
 Shift Mod4 F11 :Exit

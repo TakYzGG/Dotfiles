@@ -4,22 +4,34 @@
  
 # Buscador
       [exec] (Buscar programas)     	 	{dmenu_run}
-    
+   
+# Separador
+      [separator] 
+
 # Firefox
+      [exec] (Firefox)				{firefox}
+
+# Gestor de archivos
+      [exec] (Gestor de archivos)		{Thunar}
+
+# Separador
+      [separator] 
+
+# Submenu internet
 [submenu] (Internet)
 	  [exec] (Firefox)						{firefox}
 	  [exec] (Conectarse a internet)		{lxterminal -e sudo nmtui}
 [end]
 
 # Submenu Utilidades
-[submenu] (Utilidades)
+[submenu] (Accesorios)
 	  [exec] (Calculadora)					{galculator}
 	  [exec] (Visor de PDF)					{xreader}
       [exec] (Editor de texto)				{leafpad}
 	  [exec] (Gestor de discos)				{lxterminal -e sudo gparted}
       [exec] (Visor de imagenes)            {mirage}
+	  [exec] (Gestor de archivos)       {Thunar}
 	  [exec] (Compresor de archivos)		{xarchiver}
-	  [exec] (Explorador de archivos)       {Thunar}
 	  [exec] (Controlador de volumen)		{pavucontrol}
 [end]
 
@@ -45,17 +57,20 @@
 		[exec] (Reiniciar)					{lxterminal -e sudo reboot}
 [end]
 
-# Submenu Fluxblox menu
-[submenu] (Configuracion del sistema)
-		[exec] (Resolucion)					{arandr}			
-		[exec] (Gestor de tareas)			{lxterminal -e btop}
-		[reconfig] 							(Recargar configuracion)
-[submenu] (Personalizar sistema)
+# Personalizar
+[submenu] (Personalizar fluxbox)
 		[exec] (Temas programas) {lxappearance}
 		[submenu] (Temas fluxbox) {Choose a style...}
 				[stylesdir] (~/.fluxbox/styles)
 [end]	
 [end]
+
+# Submenu Fluxblox menu
+[submenu] (Configuracion del sistema)
+		[exec] (Resolucion)					{arandr}			
+		[exec] (Administrador de tareas)			{lxterminal -e btop}
+		[separator]
+		[restart] 							(Recargar fluxbox)
 [end]
 [endencoding]
 [end]
