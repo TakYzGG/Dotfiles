@@ -21,8 +21,11 @@ set $mod Mod4
 bindsym $mod+Return exec lxterminal
 
 # Ejecutar un programa
-bindsym $mod+d exec dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9" 
+bindsym $mod+d exec dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"
 bindsym $mod+w exec firefox
+
+# Ejecutar un script
+bindsym $mod+p exec ~/.config/dmenu-menus/programas.sh
 
 # Salir de i3
 bindsym $mod+Shift+F11 exec "i3-msg exit"
