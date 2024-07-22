@@ -2,59 +2,56 @@
 [begin] (Menu)
 [encoding] {UTF-8}
  
+# Separador
+      [separator] 
+
 # Buscador
-		[exec] (Buscar programas)				{dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"}
+      [exec] (Buscar programas)     	 	{dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"}
    
 # Separador
-		[separator] 
+      [separator] 
 
 # Firefox
-		[exec] (Firefox)						{firefox}
+      [exec] (Firefox)				{firefox}
 
 # Gestor de archivos
-		[exec] (Gestor de archivos)				{Thunar}
+      [exec] (Gestor de archivos)		{Thunar}
 
 # Separador
-		[separator] 
+      [separator] 
 
 # Submenu internet
 [submenu] (Internet)
-		[exec] (Firefox)						{firefox}
-		[exec] (Conectarse a internet)			{lxterminal -e sudo nmtui}
+	  [exec] (Firefox)						{firefox}
+	  [exec] (Conectarse a internet)		{lxterminal -e sudo nmtui}
 [end]
 
-# Submenu Utilidades
+# Submenu Accesorios
 [submenu] (Accesorios)
-		[exec] (Calculadora)					{galculator}
-		[exec] (Visor de PDF)					{xreader}
-		[exec] (Editor de texto)				{leafpad}
-		[exec] (Gestor de discos)				{lxterminal -e sudo gparted}
-		[exec] (Visor de imagenes)            	{mirage}
-		[exec] (Gestor de archivos)				{Thunar}
-		[exec] (Compresor de archivos)			{xarchiver}
-		[exec] (Controlador de volumen)			{pavucontrol}
+	  [exec] (Calculadora)					{galculator}
+	  [exec] (Visor de PDF)					{xreader}
+      [exec] (Editor de texto)				{leafpad}
+	  [exec] (Gestor de discos)				{lxterminal -e sudo gparted}
+      [exec] (Visor de imagenes)            {mirage}
+	  [exec] (Gestor de archivos)       {Thunar}
+	  [exec] (Compresor de archivos)		{xarchiver}
+	  [exec] (Controlador de volumen)		{pavucontrol}
 [end]
 
 # Submenu Multimedia
 [submenu] (Multimedia)
-		[exec] (Reproductor de video)			{vlc}
-		[exec] (Reproductor de musica)			{audacious}
+		[exec] (Reproductor de video)		{vlc}
+		[exec] (Reproductor de musica)		{audacious}
 [end]
 
 # Submenu office
 [submenu] (Libre Office)
-		[exec] (Word)							{libreoffice --writer}
-		[exec] (Exel)							{libreoffice --calc}
-		[exec] (Dibujo)							{libreoffice --draw}
-		[exec] (Powerpoint)						{libreoffice --impress}
-		[exec] (Base de datos)					{libreoffice --base}
-		[exec] (Editor de formulas)				{libreoffice --math}
-[end]
-
-# Submenu Energia
-[submenu] (Apagar / Reiniciar)
-		[exec] (Apagar)							{lxterminal -e sudo poweroff}
-		[exec] (Reiniciar)						{lxterminal -e sudo reboot}
+      [exec] (Word) 		     			{libreoffice --writer}
+      [exec] (Exel)		     				{libreoffice --calc}
+      [exec] (Dibujo) 		     			{libreoffice --draw}
+      [exec] (Powerpoint)            		{libreoffice --impress}
+      [exec] (Base de datos) 		     	{libreoffice --base}
+      [exec] (Editor de formulas) 		    {libreoffice --math}
 [end]
 
 # Personalizar
@@ -67,10 +64,20 @@
 
 # Submenu Fluxblox menu
 [submenu] (Configuracion del sistema)
-		[exec] (Resolucion)						{arandr}			
-		[exec] (Administrador de tareas)		{lxterminal -e btop}
+		[exec] (Resolucion)					{arandr}			
+		[exec] (Administrador de tareas)			{lxterminal -e btop}
 		[separator]
-		[restart] 								(Recargar fluxbox)
+		[restart] 							(Recargar fluxbox)
 [end]
+
+# Separador
+      [separator]
+
+# Submenu Apagar Reiniciar
+		[exec] (Apagar / Reiniciar)			{/usr/local/bin/apagar.sh}
+
+# Separador
+      [separator] 
+
 [endencoding]
 [end]
