@@ -1,7 +1,8 @@
-Atajos de teclado de fluxbox
+<--Atajos de teclado de fluxbox-->
 
 <--cambiar de ventana-->
    win + tab
+
 <--cambiar de escritorio-->
    win + 0-9
 
