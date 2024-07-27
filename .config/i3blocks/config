@@ -3,6 +3,21 @@ align=center
 markup=UbuntuMono Nerd Font Mono Bold 10
 color=#D8DEE9
 
+[Bateria]
+color=#A3BE8C
+command=$HOME/.config/i3blocks/modulos/bateria.sh
+interval=60
+
+[Brillo]
+color=#D08770
+command=$HOME/.config/i3blocks/modulos/brillo.sh
+interval=60
+
+[Volumen]
+color=#EBCB8B
+command=$HOME/.config/i3blocks/modulos/volumen.sh
+interval=1
+
 [Hora]
 command=date +'%H:%M'
 interval=1
