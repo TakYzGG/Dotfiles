@@ -29,6 +29,7 @@ case $selec in
 			Cancelar)
 				exit 0 ;;
 		esac ;;
+
 	Cancelar)
 		exit 0 ;;
 esac
