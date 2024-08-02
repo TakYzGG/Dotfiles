@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Cambiar idioma del teclado
-setxkbmap -layout latam
+setxkbmap latam
 
 # Programsa de inicio
 exec feh --bg-scale ~/Wallpapers &
