@@ -4,7 +4,7 @@
 
 # Inicio automatico
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id setxkbmap -layout latam
+exec --no-startup-id setxkbmap latam
 exec --no-startup-id feh --bg-scale ~/Wallpapers/1.png
 
 # Recargar la configuracion de i3wm
