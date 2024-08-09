@@ -2,11 +2,11 @@
 #creador: TakYzGG
 
 opciones="Cambiar idioma\nInvertir Esc/Mayus\nCancelar"
-selec=$(echo $opciones | dmenu -i -p "Elige una opcion:" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9")
+selec=$(echo -e $opciones | dmenu -i -p "Elige una opcion:" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9")
 case $selec in
 	"Cambiar idioma")
 		opciones="Español es\nEspañol la\nIngles\nCancelar"
-		selec=$(echo $opciones | dmenu -i -p "Elige una opcion:" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9")
+		selec=$(echo -e $opciones | dmenu -i -p "Elige una opcion:" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9")
 		case $selec in
 			"Español es")
 				setxkbmap es ;;
@@ -20,7 +20,7 @@ case $selec in
 
 	"Invertir Esc/Mayus")
 		opciones="Activar\nDesactivar\nCancelar"
-		selec=$(echo $opciones | dmenu -i -p "Elige una opcion:" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9")
+		selec=$(echo -e $opciones | dmenu -i -p "Elige una opcion:" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9")
 		case $selec in
 			Activar)
 				setxkbmap -option caps:swapescape ;;
