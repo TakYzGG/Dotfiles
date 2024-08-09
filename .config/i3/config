@@ -17,26 +17,35 @@ bindsym $mod+Shift+r restart
 # Tecla mod
 set $mod Mod4
 
+# Definiciones
+set $dmenu 			dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"
+set $browser 		firefox
+set $terminal 		lxterminal
+set $file_explorer 
+
 # Ejecutar una terminal
-bindsym $mod+Return exec lxterminal
+bindsym $mod+Return exec $terminal
 
 # Ejecutar un programa
-bindsym $mod+d exec dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"
-bindsym $mod+w exec firefox
+bindsym F2 exec $dmenu
+bindsym $mod+w exec $browser
+bindsym $mod+e exec lxterminal -e ranger
+
+# Ejecutar un Script
+bindsym F3 exec /usr/local/bin/apagar
 
 # Salir de i3
 bindsym $mod+Shift+F11 exec "i3-msg exit"
 
 # Control de brillo
-bindsym XF86MonBrightnessDown exec brightnessctl set 1%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +1%
+bindsym XF86MonBrightnessDown exec brightnessctl set 1%- && pkill -RTMIN+10 i3blocks
+bindsym XF86MonBrightnessUp exec brightnessctl set +1% && pkill -RTMIN+10 i3blocks
 
 # Control de volumen PulseAudio
-set $refresh_status pkill -RTMIN+10 i3blocks
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ && pkill -RTMIN+10 i3blocks
 
 #---------------------------
 # <<--Atajos de ventanas-->>
@@ -144,7 +153,6 @@ bindsym $mod+Shift+0 move container to workspace $ws0
 font pango:UbuntuMono Nerd Font Mono Bold 10
 
 # Theme colors: Nord Theme
-
 # Colores de las ventanas
 
 #							backgr. border  backgr. border
