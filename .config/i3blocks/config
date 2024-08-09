@@ -6,17 +6,19 @@ color=#D8DEE9
 [Bateria]
 color=#A3BE8C
 command=$HOME/.config/i3blocks/modulos/bateria.sh
-interval=60
+interval=300
 
 [Brillo]
 color=#D08770
 command=$HOME/.config/i3blocks/modulos/brillo.sh
-interval=60
+interval=once
+signal=10
 
 [Volumen]
 color=#EBCB8B
 command=$HOME/.config/i3blocks/modulos/volumen.sh
-interval=1
+interval=once
+signal=10
 
 [Hora]
 command=date +'%H:%M'
