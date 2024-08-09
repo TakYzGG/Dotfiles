@@ -1,7 +1,7 @@
 #!/bin/sh
 
-opciones="Google\nGithub\nYoutube\nArch Wiki\nCancelar"
-selec=$(echo -e $opciones | dmenu -i -p "Elige una opcion" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9")
+opciones="Google\nGithub\nYoutube\nArch Wiki"
+selec=$(echo $opciones | dmenu -i -p "Elige una opcion" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9")
 case $selec in
 	Google)
 		firefox https://google.com ;;
@@ -11,6 +11,4 @@ case $selec in
 		firefox https://youtube.com ;;
 	"Arch Wiki")
 		firefox https://wiki.archlinux.org ;;
-	Cancelar)
-		exit 0 ;;
 esac
