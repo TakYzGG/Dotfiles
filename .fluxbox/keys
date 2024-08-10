@@ -37,7 +37,12 @@ Mod4 Tab :NextWindow {grups} (workspace=[current])
 Mod4 Return :Exec lxterminal
 Mod4 w      :Exec firefox
 Mod4 e	    :Exec Thunar
-Mod4 d		:Exec dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"
+F2			:Exec dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"
+
+# Ejecutar scripts 
+F3 :Exec /usr/local/bin/apagar
+F4 :Exec /usr/local/bin/programas
+F5 :Exec /usr/local/bin/menus
 
 # Atajos de ventanas
 Shift Mod4 q :Close
@@ -51,6 +56,12 @@ XF86MonBrightnessDown :Exec xbacklight -dec 10
 
 # exit fluxbox
 Shift Mod4 F11 :Exit
+
+# Tiling
+Mod4 Left  :MacroCmd {ResizeTo 50% 100%} {MoveTo 00 00 Left}
+Mod4 Right :MacroCmd {ResizeTo 50% 100%} {MoveTo 00 00 Right}
+Mod4 Up    :MacroCmd {ResizeTo 100% 50%} {MoveTo 00 00 Up}
+Mod4 Down  :MacroCmd {ResizeTo 100% 50%} {MoveTo 00 00 Bottom}
 
 # Cambiar de escritorio
 Mod4 1 :Workspace 1
