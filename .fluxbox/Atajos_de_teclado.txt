@@ -24,6 +24,7 @@ Atajos de teclado de fluxbox
    win + e      (thunar)
    
 <--dmenu atajos-->
-   F2			(dmenu)
-   F3			(menu apagar)
-   F4			(menu programas)
+   F1			(dmenu)
+   F2			(menu screenshot)
+   F3			(menu programas)
+   F12		(menu apagar)

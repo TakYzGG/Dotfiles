@@ -37,12 +37,12 @@ Mod4 Tab :NextWindow {grups} (workspace=[current])
 Mod4 Return :Exec lxterminal
 Mod4 w      :Exec firefox
 Mod4 e	    :Exec Thunar
-F2			:Exec dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"
+F1			:Exec dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"
 
 # Ejecutar scripts 
-F3 :Exec /usr/local/bin/apagar
-F4 :Exec /usr/local/bin/programas
-F5 :Exec /usr/local/bin/menus
+F2  :Exec /usr/local/bin/screenshot
+F3  :Exec /usr/local/bin/programas
+F12 :Exec /usr/local/bin/apagar
 
 # Atajos de ventanas
 Shift Mod4 q :Close

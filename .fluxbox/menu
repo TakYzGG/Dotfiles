@@ -16,65 +16,82 @@
 
 # Gestor de archivos
       [exec] (Gestor de archivos)		{Thunar}
-
-# Separador
       [separator] 
 
 # Submenu internet
 [submenu] (Internet)
+      [separator] 
 	  [exec] (Firefox)						{firefox}
 	  [exec] (Conectarse a internet)		{lxterminal -e sudo nmtui}
+      [separator] 
+	  [exec] (Google)					{firefox https://google.com}
+	  [exec] (Github)					{firefox https://github.com}
+	  [exec] (Youtube)					{firefox https://youtube.com}
+	  [exec] (Arch Wiki)				{firefox https://wiki.archlinux.org}
+      [separator] 
 [end]
 
 # Submenu Accesorios
 [submenu] (Accesorios)
+      [separator] 
 	  [exec] (Calculadora)					{galculator}
 	  [exec] (Visor de PDF)					{xreader}
       [exec] (Editor de texto)				{leafpad}
 	  [exec] (Gestor de discos)				{lxterminal -e sudo gparted}
       [exec] (Visor de imagenes)            {mirage}
-	  [exec] (Gestor de archivos)       {Thunar}
+	  [exec] (Gestor de archivos)       	{Thunar}
+	  [exec] (Captura de pantalla)			{/usr/local/bin/screenshot}
+	  [exec] (Grabardor de pantalla)		{simplescreenrecorder}
 	  [exec] (Compresor de archivos)		{xarchiver}
 	  [exec] (Controlador de volumen)		{pavucontrol}
+      [separator] 
 [end]
 
 # Submenu Multimedia
 [submenu] (Multimedia)
+        [separator] 
 		[exec] (Reproductor de video)		{vlc}
 		[exec] (Reproductor de musica)		{audacious}
+        [separator] 
 [end]
 
 # Submenu office
 [submenu] (Libre Office)
+      [separator] 
       [exec] (Word) 		     			{libreoffice --writer}
       [exec] (Exel)		     				{libreoffice --calc}
       [exec] (Dibujo) 		     			{libreoffice --draw}
       [exec] (Powerpoint)            		{libreoffice --impress}
       [exec] (Base de datos) 		     	{libreoffice --base}
       [exec] (Editor de formulas) 		    {libreoffice --math}
+      [separator] 
 [end]
 
 # Personalizar
 [submenu] (Personalizar fluxbox)
+      [separator] 
 		[exec] (Temas programas) {lxappearance}
 		[submenu] (Temas fluxbox) {Choose a style...}
 				[stylesdir] (~/.fluxbox/styles)
 [end]	
+      [separator] 
 [end]
 
 # Submenu Fluxblox menu
 [submenu] (Configuracion del sistema)
+		[separator]
 		[exec] (Resolucion)					{arandr}			
 		[exec] (Administrador de tareas)			{lxterminal -e btop}
 		[separator]
 		[restart] 							(Recargar fluxbox)
+      [separator] 
 [end]
 
 # Separador
       [separator]
 
 # Submenu Apagar Reiniciar
-		[exec] (Apagar / Reiniciar)			{/usr/local/bin/apagar.sh}
+		[exec] (Apagar / Reiniciar)			{/usr/local/bin/apagar}
 
 # Separador
       [separator] 
