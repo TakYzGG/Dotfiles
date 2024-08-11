@@ -19,20 +19,23 @@ set $mod Mod4
 
 # Definiciones
 set $dmenu 			dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"
+set $music			cmus
 set $browser 		firefox
 set $terminal 		lxterminal
-set $file_explorer 
+set $file_explorer	ranger
 
 # Ejecutar una terminal
 bindsym $mod+Return exec $terminal
 
 # Ejecutar un programa
-bindsym F2 exec $dmenu
+bindsym F1 exec $dmenu
 bindsym $mod+w exec $browser
-bindsym $mod+e exec lxterminal -e ranger
+bindsym $mod+e exec $terminal -e $file_explorer
+bindsym $mod+m exec $terminal -e $music
 
 # Ejecutar un Script
-bindsym F3 exec /usr/local/bin/apagar
+bindsym F2 exec /usr/local/bin/screenshot
+bindsym F12 exec /usr/local/bin/apagar
 
 # Salir de i3
 bindsym $mod+Shift+F11 exec "i3-msg exit"
