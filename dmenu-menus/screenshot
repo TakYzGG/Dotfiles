@@ -1,0 +1,14 @@
+#!/bin/sh
+
+opciones="Todo\nVentana\nSeleccion\nCancelar"
+selec=$(echo -e $opciones | dmenu -i -p "Screenshot" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9")
+case $selec in
+	Todo)
+		scrot ;;
+	Ventana)
+		scrot -u ~/Screenshots/%Y-%m-%d_%H-%M-%S.png ;;
+	Seleccion)
+		scrot -s ~/Screenshots/%Y-%m-%d_%H-%M-%S.png ;;
+	Cancelar)
+		exit 0;;
+esac
