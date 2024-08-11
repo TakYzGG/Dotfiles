@@ -1,44 +1,30 @@
-#------------------------------
-# <<--Configuracion de i3wm-->>
-#------------------------------
+# <-TakYzGG I3 Config-> #
 
-# Inicio automatico
+# <-Inicio autimatico->
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id setxkbmap latam
 exec --no-startup-id feh --bg-scale ~/Wallpapers/1.png
 
-# Recargar la configuracion de i3wm
-bindsym $mod+Shift+r restart
+# <-Atajos de teclado->
 
-#--------------------------
-# <<--Atajos de teclado-->>
-#--------------------------
-
-# Tecla mod
-set $mod Mod4
-
-# Definiciones
+# Definir programas
+set $mod			Mod4
 set $dmenu 			dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"
 set $music			cmus
 set $browser 		firefox
 set $terminal 		lxterminal
 set $file_explorer	ranger
 
-# Ejecutar una terminal
+# Programas
 bindsym $mod+Return exec $terminal
+bindsym F1			exec $dmenu
+bindsym $mod+w		exec $browser
+bindsym $mod+e		exec $terminal -e $file_explorer
+bindsym $mod+m		exec $terminal -e $music
 
-# Ejecutar un programa
-bindsym F1 exec $dmenu
-bindsym $mod+w exec $browser
-bindsym $mod+e exec $terminal -e $file_explorer
-bindsym $mod+m exec $terminal -e $music
-
-# Ejecutar un Script
-bindsym F2 exec /usr/local/bin/screenshot
-bindsym F12 exec /usr/local/bin/apagar
-
-# Salir de i3
-bindsym $mod+Shift+F11 exec "i3-msg exit"
+# Scripts
+bindsym F2 			exec /usr/local/bin/screenshot
+bindsym F12 		exec /usr/local/bin/apagar
 
 # Control de brillo
 bindsym XF86MonBrightnessDown exec brightnessctl set 1%- && pkill -RTMIN+10 i3blocks
@@ -49,10 +35,6 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ && pkill -RTMIN+10 i3blocks
-
-#---------------------------
-# <<--Atajos de ventanas-->>
-#---------------------------
 
 # Cambiar de ventana
 bindsym $mod+Left focus left
@@ -101,29 +83,6 @@ mode "Rescalar" {
 
 bindsym $mod+r mode "Rescalar"
 
-#--------------------
-# <<--Escritorios-->>
-#--------------------
-
-# Nombre de los escritorios
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws0 "10"
-
-# Programas con escritorio predeterminado
-for_window [class="Firefox"] move container to workspace $ws3 
-
-#-----------------------------
-# <<--Atajos de escritorio-->>
-#-----------------------------
-
 # Cambiar de escritorio
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -148,29 +107,47 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws0
 
-#--------------------------------
-# <<--Personalizacion de i3wm-->>
-#--------------------------------
+# Recargar I3
+bindsym $mod+Shift+r restart
+
+# Salir de I3
+bindsym $mod+Shift+F11 exec "i3-msg exit"
+
+# <-Escritorios->
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws0 "10"
+
+for_window [class="Firefox"] move container to workspace $ws3
+for_window [class="Discord"] move container to workspace $ws10
+for_window [class="TelegramDesktop"] move container to workspace $ws10
+
+# <-Personalizacion->
 
 # Fuente
 font pango:UbuntuMono Nerd Font Mono Bold 10
-
-# Theme colors: Nord Theme
-# Colores de las ventanas
-
-#							backgr. border  backgr. border
-client.focused				#2E3440 #5E81AC #2E3440 #B84AED
-client.focused_inactive		#3B4252 #3B4252 #3B4252 #3B4252
-client.unfocused			#3B4252 #3B4252 #3B4252 #3B4252
-client.urgent				#3B4252 #3B4252 #3B4252 #3B4252
 
 # Gaps
 smart_gaps on
 gaps inner 2
 gaps outer 2
 
-# Barra de titulo de las ventanas
+# Barra de titulo
 for_window [class="^.*"] border pixel 2
+
+# Bordes de las ventanas
+#							backgr. border  backgr. border
+client.focused				#2E3440 #5E81AC #2E3440 #B84AED
+client.focused_inactive		#3B4252 #3B4252 #3B4252 #3B4252
+client.unfocused			#3B4252 #3B4252 #3B4252 #3B4252
+client.urgent				#3B4252 #3B4252 #3B4252 #3B4252
 
 # Barra de estado
 bar {
