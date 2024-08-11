@@ -1,6 +1,6 @@
 # Propiedades globales
 align=center
-markup=UbuntuMono Nerd Font Mono Bold 10
+markup=pango
 color=#D8DEE9
 
 [Bateria]
