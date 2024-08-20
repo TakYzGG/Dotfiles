@@ -6,7 +6,7 @@ set tabstop=4
 set shiftwidth=4
 set smartindent
 set nowrap
-set clipboard+=unnammedplus
+set clipboard=unnamedplus
 
 "" No crear archivos de respaldo
 set nobackup
