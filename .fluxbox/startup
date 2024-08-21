@@ -1,10 +1,11 @@
 #!/bin/sh
 
 # Cambiar idioma del teclado
-setxkbmap latam
+setxkbmap -layout latam
 
 # Programsa de inicio
-exec feh --bg-scale ~/Wallpapers &
+exec ~/.fehbg &
+exec plank &
 
 # Fluxbox
 exec fluxbox

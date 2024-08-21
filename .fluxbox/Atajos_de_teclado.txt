@@ -27,4 +27,5 @@ Atajos de teclado de fluxbox
    F1			(dmenu)
    F2			(menu screenshot)
    F3			(menu programas)
+   F3			(menu wallpapers)
    F12		(menu apagar)
