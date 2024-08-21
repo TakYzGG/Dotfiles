@@ -1,0 +1,5 @@
+#!/bin/sh
+
+wallpaper="$HOME/Wallpapers"
+selec=$(find $wallpaper -type f -printf "%f\n"| dmenu -i -p "Eligue un fondo:" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9")
+[ -n "$selec" ] && feh --bg-scale "$wallpaper/$selec"
