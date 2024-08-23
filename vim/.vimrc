@@ -20,6 +20,13 @@ set timeoutlen=300
 set updatetime=300
 set history=100
 
+"" Cerrar (, [, {, ', "  automaticamente
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
+inoremap ' ''<Left>
+inoremap " ""<Left>
+
 "" Personalizacion
 syntax on
 colorscheme nord
