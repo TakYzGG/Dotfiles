@@ -5,18 +5,16 @@ muteado=$(amixer get Master | grep -oP '\[off\]')
 
 if [ $muteado = "[off]" ]; then
 	echo "󰖁mute"
-
 else
-if [ $volumen -ge 51 ] && [ $volumen -le 100 ]; then
-	echo "󰕾$volumen"
-fi
-
-if [ $volumen -ge 0 ] && [ $volumen -le 50 ]; then
-	echo "󰖀$volumen"
-fi
-
-if [ $volumen -eq 0 ]; then 
-	echo "󰝟$volumen"
-fi
-
+	if [ $volumen -ge 51 ] && [ $volumen -le 100 ]; then
+		echo "󰕾$volumen"
+	else
+		if [ $volumen -ge 0 ] && [ $volumen -le 50 ]; then
+			echo "󰖀$volumen"
+		else
+			if [ $volumen -eq 0 ]; then 
+				echo "󰝟$volumen"
+			fi
+		fi
+	fi
 fi
