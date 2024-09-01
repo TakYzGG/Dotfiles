@@ -37,7 +37,6 @@
 	  [exec] (Calculadora)					{galculator}
 	  [exec] (Captura de pantalla)			{/usr/local/bin/screenshot}
 	  [exec] (Compresor de archivos)		{xarchiver}
-	  [exec] (Controlador de volumen)		{pavucontrol}
       [exec] (Editor de texto)				{leafpad}
 	  [exec] (Gestor de archivos)       	{Thunar}
 	  [exec] (Gestor de discos)				{lxterminal -e sudo gparted}
@@ -74,12 +73,14 @@
 [submenu] (Configuracion del sistema)
 		[separator]
 		[exec] (Administrador de tareas)			{lxterminal -e btop}
+		[exec] (Controlador de bluetooth)			{blueman-manager}
+	  	[exec] (Controlador de volumen)		{pavucontrol}
 		[exec] (Opciones del teclado)			{/usr/local/bin/teclado}
 		[exec] (Resolucion)					{arandr}			
 		[submenu] (CLI)
 		[separator]
 		[exec] (Cmus) {lxterminal -e cmus}
-		[exec] (Ranger) {lxterminal -e ranger}
+		[exec] (Vifm) {lxterminal -e vifm ~/}
 		[exec] (Vim) {lxterminal -e vim}
 		[separator]
 		[end]

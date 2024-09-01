@@ -4,8 +4,12 @@
 setxkbmap -layout latam
 
 # Programsa de inicio
+exec /usr/libexec/polkit-mate-authentication-agent-1 &
 exec ~/.fehbg &
 exec plank &
+exec cbatticon &
+exec nm-applet &
+exec volumeicon &
 
 # Fluxbox
 exec fluxbox
