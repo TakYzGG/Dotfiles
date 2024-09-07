@@ -3,7 +3,7 @@
 # <-Inicio autimatico->
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id setxkbmap latam
-exec --no-startup-id feh --bg-scale ~/Wallpapers/1.png
+exec --no-startup-id  ~/.fehbg
 
 # <-Atajos de teclado->
 
@@ -13,28 +13,28 @@ set $dmenu 			dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2
 set $music			cmus
 set $browser 		firefox
 set $terminal 		lxterminal
-set $file_explorer	ranger
+set $file_explorer	vifm ~/
 
 # Programas
 bindsym $mod+Return exec $terminal
-bindsym F1			exec $dmenu
+bindsym $mod+F1		exec $dmenu
 bindsym $mod+w		exec $browser
 bindsym $mod+e		exec $terminal -e $file_explorer
 bindsym $mod+m		exec $terminal -e $music
 
 # Scripts
-bindsym F2 			exec /usr/local/bin/screenshot
-bindsym F12 		exec /usr/local/bin/apagar
+bindsym $mod+F2 	exec /usr/local/bin/screenshot
+bindsym $mod+F11	exec /usr/local/bin/wallpaper
+bindsym $mod+F12 	exec /usr/local/bin/apagar
 
 # Control de brillo
 bindsym XF86MonBrightnessDown exec brightnessctl set 1%- && pkill -RTMIN+10 i3blocks
 bindsym XF86MonBrightnessUp exec brightnessctl set +1% && pkill -RTMIN+10 i3blocks
 
 # Control de volumen PulseAudio
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pamixer --toggle-mute && pkill -RTMIN+10 i3blocks
 
 # Cambiar de ventana
 bindsym $mod+h focus left
@@ -58,7 +58,7 @@ bindsym $mod+Tab split v
 bindsym $mod+Shift+Tab split h
 
 # Entar en pantalla completa
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # Hacer una ventana flotante
 bindsym $mod+Shift+space floating toggle
