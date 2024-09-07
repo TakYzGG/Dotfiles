@@ -1,9 +1,9 @@
 #!/bin/sh
 
-volumen=$(amixer get Master | grep -oP '\d+(?=%)' | head -n 1)
-muteado=$(amixer get Master | grep -oP '\[off\]')
+volumen=$(pamixer --get-volume-human | grep -oP '\d+(?=%)' | head -n 1)
+muteado=$(pamixer --get-mute)
 
-if [ $muteado = "[off]" ]; then
+if [ $muteado = "true" ]; then
 	echo "󰖁mute"
 else
 	if [ $volumen -ge 51 ] && [ $volumen -le 100 ]; then
