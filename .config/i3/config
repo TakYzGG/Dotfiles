@@ -8,24 +8,26 @@ exec --no-startup-id  ~/.fehbg
 # <-Atajos de teclado->
 
 # Definir programas
+set $alt			Mod1
 set $mod			Mod4
-set $dmenu 			dmenu_run -i -p "Ejecutar" -fn "UbuntuMonoNerdFontMono-12" -nb "#2E3440" -nf "#4C566A" -sb "#5E81AC" -sf "#D8DEE9"
+set $rofi			rofi -show drun -b
+set $rofid 			rofi -show run
 set $music			cmus
 set $browser 		firefox
 set $terminal 		lxterminal
 set $file_explorer	vifm ~/
 
 # Programas
-bindsym $mod+Return exec $terminal
-bindsym $mod+F1		exec $dmenu
-bindsym $mod+w		exec $browser
-bindsym $mod+e		exec $terminal -e $file_explorer
-bindsym $mod+m		exec $terminal -e $music
+bindsym $mod+Return 	exec $terminal
+bindsym $mod+F1			exec $rofi
+bindsym $alt+F1			exec $rofid
+bindsym $mod+w			exec $browser
+bindsym $mod+e			exec $terminal -e $file_explorer
+bindsym $mod+m			exec $terminal -e $music
 
 # Scripts
-bindsym $mod+F2 	exec /usr/local/bin/screenshot
-bindsym $mod+F11	exec /usr/local/bin/wallpaper
-bindsym $mod+F12 	exec /usr/local/bin/apagar
+bindsym $mod+F2 		exec /usr/local/bin/screenshot
+bindsym $mod+F12 		exec /usr/local/bin/apagar
 
 # Control de brillo
 bindsym XF86MonBrightnessDown exec brightnessctl set 1%- && pkill -RTMIN+10 i3blocks
