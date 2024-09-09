@@ -4,10 +4,10 @@ opciones="Apagar\nReiniciar\nCancelar"
 selec=$(echo -e $opciones | rofi -dmenu -i -p "Energia")
 case $selec in
 	Apagar)
-		password=$(echo ":v"| rofi -dmenu -p "Ingresa la contraseña")
+		password=$(rofi -dmenu -p "Ingresa la contraseña")
 		echo $password | sudo -S poweroff ;;
 	Reiniciar)
-		password=$(echo ":v"| rofi -dmenu -p "Ingresa la contraseña")
+		password=$(rofi -dmenu -p "Ingresa la contraseña")
 		echo $password | sudo -S reboot ;;
 	Cancelar)
 		exit 0 ;;
